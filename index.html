@@ -3,64 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Bella Onojie is an AI-powered food subscription that will make you eat healthy again. Great food with great taste delivered to your door steps"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Food App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bella Olonje &mdash; Food App</title>
   </head>
   <body>
     <div class="container">
-      <header class="heading">
-        <img src="img/Bella Olonje logo 111 1.png" alt="Logo" class="logo" />
+      <header class="header">
+        <a href="#" class="header__img--link">
+          <img src="img/logo.png" alt="Logo" class="header__logo" />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
         <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Product</a>
+            <li class="nav__item">
+              <a href="#product" class="nav__link">Product</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Faq</a>
+            <li class="nav__item">
+              <a href="#faq" class="nav__link">Faq</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>
-        <button class="btn-mobile-nav">
-          <ion-icon class="icon-mobile-nav open" name="menu-outline"></ion-icon>
-          <ion-icon
-            class="icon-mobile-nav close"
-            name="close-outline"
-          ></ion-icon>
-        </button>
+        <!-- <button class="nav__btn-mobile">
+          <svg class="nav__icon nav__icon--open">
+            <use xlink:href="img/icon.svg#icon-menu"></use>
+          </svg>
+          <svg class="nav__icon nav__icon--close">
+            <use xlink:href="img/icon.svg#icon-cross"></use>
+          </svg>
+        </button> -->
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="navigation">
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+          <div class="navigation__bg">&nbsp;</div>
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#home" class="navigation__link active">Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#product" class="navigation__link">Product</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#faq" class="navigation__link">Faq</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#contact" class="navigation__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
-      <header class="header">
-        <div class="header-box">
-          <h3 class="heading-ter">Food app</h3>
-          <h1 class="heading-pry">
+      <header class="hero">
+        <div class="hero__box">
+          <h1 class="heading__h1 mb-1">
             Why stay hungry when <br />
-            you can order from bella onojie
+            you can order from Bella Onojie
           </h1>
-          <span>Download the bella onojioe app</span>
-          <a class="btn btn-full" href="#">Playstore</a>
-          <a class="btn btn-ghost" href="#">App store</a>
+          <h3 class="heading__h3">Food app</h3>
+          <span class="heading__span mb-1">Download the bella onojioe app</span>
+          <div class="hero__btn">
+            <a class="btn btn__full" href="#">Playstore</a>
+            <a class="btn btn__ghost" href="#">App store</a>
+          </div>
         </div>
       </header>
 
-      <figure class="img-photo">
+      <figure class="img-photo" id="home">
         <img class="apple" src="img/apple.png" alt="apple" />
         <img class="android" src="img/andriodx2.png" alt="andriod" />
       </figure>
       <main class="main">
-        <section class="section">
-          <h2>How the app works</h2>
+        <article class="section" id="product">
+          <h2 class="heading__h2 text-center">How the app works</h2>
           <div class="container-grid grid grid--2-cols grid-center-v">
             <div class="step-img-box">
               <img
@@ -70,7 +111,7 @@
               />
             </div>
             <div class="step-text-box">
-              <p class="step-number">Create an account</p>
+              <p class="heading__h3--orange">Create an account</p>
               <h3 class="heading-tertiary">
                 Create/login to an existing account to get started
               </h3>
@@ -80,7 +121,7 @@
             </div>
 
             <div class="step-text-box">
-              <p class="step-number">Explore varieties</p>
+              <p class="heading__h3--orange">Explore varieties</p>
               <h3 class="heading-tertiary">
                 Shop for your favorites meals as e dey hot
               </h3>
@@ -97,13 +138,13 @@
             </div>
             <div class="step-img-box">
               <img
-                src="img/step-img2.png"
+                src="img/step-img3.png"
                 alt="iPhone app preferences selection screen"
                 class="step-img"
               />
             </div>
             <div class="step-text-box">
-              <p class="step-number">Checkout</p>
+              <p class="heading__h3--orange">Checkout</p>
               <h3 class="heading-tertiary">
                 When you done check out and get it delivered
               </h3>
@@ -112,46 +153,42 @@
               </p>
             </div>
           </div>
-        </section>
-        <section class="download">
-          <div class="header-box">
-            <h1>Download the app now.</h1>
-            <span class="span"
+        </article>
+        <section class="app" id="faq">
+          <div class="app__box">
+            <p class="app__text">Download the app now.</p>
+            <span class="app__span"
               >Available on your favorite store. Start your premium experience
               now</span
             >
-            <a class="btn btn-full" href="#">Playstore</a>
-            <a class="btn btn-ghost" href="#">App store</a>
+            <div class="hero__btn">
+              <a class="btn btn__full br-6" href="#">Playstore</a>
+              <a class="btn btn__ghost br-6" href="#">App store</a>
+            </div>
           </div>
         </section>
       </main>
-      <footer class="foote">
+      <footer class="foote" id="contact">
         <div class="container-grid footer">
-          <img src="img/Bella Olonje logo 111 1.png" alt="Logo" />
+          <a href="#" class="footer__img--link">
+            <img src="img/logo.png" alt="Logo" class="footer__logo" />
+          </a>
 
-          <address class="address">
-            <span>
-              <img src="img/twiiter.png" alt="twitter logo" />
-            </span>
-            <span>
-              <img src="img/fb.png" alt="twitter logo" />
-            </span>
-            <span>
-              <img src="img/instagram.png" alt="twitter logo" class="logo" />
-            </span>
+          <address class="footer__address">
+            <svg class="footer__icon">
+              <use xlink:href="img/icon.svg#icon-twitter"></use>
+            </svg>
+            <svg class="footer__icon">
+              <use xlink:href="img/icon.svg#icon-facebook2"></use>
+            </svg>
+            <svg class="footer__icon">
+              <use xlink:href="img/icon.svg#icon-instagram"></use>
+            </svg>
           </address>
-          <div class="copyright">copyright 2020 Bella Onojie.com</div>
+          <div class="footer__copy">copyright 2020 Bella Onojie.com</div>
         </div>
       </footer>
     </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
     <script src="app.js"></script>
   </body>
 </html>
